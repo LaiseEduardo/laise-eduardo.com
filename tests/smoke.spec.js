@@ -67,3 +67,10 @@ test('skill groups put the term before its description', async ({ page }) => {
   const firstTags = await page.locator('#skills .dim-row').evaluateAll(rows => rows.map(r => r.firstElementChild.tagName));
   for (const t of firstTags) expect(t).toBe('DT');
 });
+
+test('CV button renders exactly once when content.cv is set', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByRole('link', { name: /download cv/i })).toHaveCount(1);
+  const status = await page.evaluate(async () => (await fetch('/cv.pdf', { method: 'HEAD' })).status);
+  expect(status).toBe(200);
+});
