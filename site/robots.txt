@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://laise-eduardo.com/sitemap.xml
