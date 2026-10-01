@@ -9,6 +9,11 @@ const content = {
     linkedin: 'https://www.linkedin.com/in/laise-eduardo', // TODO confirm
   },
   cv: null, // set to 'cv.pdf' when the PDF is added to site/
+  proof: [
+    { value: '88%+', label: 'test coverage across eleven11 web, mobile and API', href: 'https://github.com/LaiseEduardo/eleven11' },
+    { value: 'Playwright', label: 'TypeScript framework with CI on every push, polar-bear', href: 'https://github.com/LaiseEduardo/polar-bear' },
+    { value: 'AWS + Terraform', label: 'infrastructure as code in four shipped repos', href: 'https://github.com/LaiseEduardo' },
+  ],
   about: [
     'TODO — paragraph 1 from CV.',
     'TODO — paragraph 2 from CV.',

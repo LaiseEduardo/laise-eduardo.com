@@ -31,3 +31,21 @@ test('project without live url shows only repo link', async ({ page }) => {
   await expect(card.getByRole('link', { name: /code/i })).toHaveCount(1);
   await expect(card.getByRole('link', { name: /live/i })).toHaveCount(0);
 });
+
+test('no horizontal overflow', async ({ page }) => {
+  await page.goto('/');
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+  expect(overflow).toBe(false);
+});
+
+test('404 page exists and is styled', async ({ page }) => {
+  await page.goto('/404.html');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('404');
+  await expect(page.locator('link[rel=stylesheet][href="styles.css"]')).toHaveCount(1);
+});
+
+test('meta description and canonical present', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('meta[name=description]')).toHaveAttribute('content', /.{40,}/);
+  await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href', 'https://laise-eduardo.com/');
+});

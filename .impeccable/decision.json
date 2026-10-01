@@ -1,0 +1,129 @@
+{
+  "title": "Choose the visual world for laise-eduardo.com",
+  "question": "The roll assigned the QC Inspection Tag. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "QC Inspection Tag",
+      "kicker": "THE ROLL",
+      "lineage": "factory quality-control hang tags, 'Inspected by No. 7' slips, carbon-copy inspection forms",
+      "thesis": "The portfolio is an inspection record: every claim carries a stamp and the evidence that earned it.",
+      "palette": ["#f4f1ea", "#c9a86a", "#1b1f24", "#b4232c", "#1f7a4d", "#2b4f8f"],
+      "materials": ["kraft tag stock", "rubber-stamp ink", "eyelet and string", "carbonless form copy"],
+      "viewport": "A single large kraft tag fills the first viewport: name and title stamped in condensed capitals, a PASSED stamp in green over the pitch, three proof lines (coverage, projects, CI) each seamed to a link, the primary action printed as a perforated tear-off slip.",
+      "risk": "Reads as novelty if the stamps outnumber the facts; the tag must stay a document, not a costume.",
+      "raised": [
+        {"from": "challenger-zoot", "raise": "Experience and projects are billed in order of importance, headline first, support below."},
+        {"from": "challenger-quilt", "raise": "Every claim is stitched to its evidence: no number without a link beside it."},
+        {"from": "challenger-hypercard", "raise": "One-bit state discipline: active and hover invert to solid ink, no gradients or glows."}
+      ],
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-pachuco-zoot-handbill-hero.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "Engineering Drawing Title Block",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "ISO mechanical drawing sheets, revision tables, tolerance callouts",
+      "thesis": "Laise as a specified part: tolerances, revisions, and a title block that says who checked it.",
+      "palette": ["#ffffff", "#0d1b2a", "#1565c0", "#9aa4ae"],
+      "materials": ["vellum sheet", "hairline drafting ink", "border frame with zone letters"],
+      "viewport": "A drawing sheet with zone letters on the frame; the title block bottom-right holds name, title, location, and 'CHECKED BY' links; the sheet body carries callouts pointing at skills and projects.",
+      "risk": "The most familiar 'precision' move for a technical portfolio; hairlines and grids can read generic."
+    },
+    {
+      "id": "challenger-zoot",
+      "label": "Zoot-Era Dance Hall Handbill",
+      "verdict": "competitive",
+      "lineage": "two-ink letterpress handbills with stacked billing",
+      "thesis": "The résumé as a bill: headline act first, support acts below, in plum and ochre.",
+      "palette": ["#5b2a52", "#d99a2b", "#f1e8d6"],
+      "materials": ["letterpress ink", "scalloped border"],
+      "viewport": "A scalloped sheet with LAISE EDUARDO billed top in display caps, roles stacked beneath by importance.",
+      "case": "Billing hierarchy maps cleanly onto a CV; recruiters identify less with a dance hall than with an inspection record.",
+      "risk": "Nostalgic when the type is timid; fights the daylight office scene.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-pachuco-zoot-handbill-hero.webp"
+    },
+    {
+      "id": "challenger-quilt",
+      "label": "Memory Quilt Atlas",
+      "verdict": "declined",
+      "lineage": "hand-pieced quilts with stitched provenance labels",
+      "thesis": "Each project a patch, each caption seamed to its fabric.",
+      "palette": ["#5f7fa3", "#1a1a1a", "#c62828", "#6b4a2b"],
+      "materials": ["pieced cloth", "red stitch rule"],
+      "viewport": "A block grid of unequal patches, one per project, captions stitched beside them.",
+      "case": "Provenance discipline is excellent; the domestic textile world does not read as test engineering to a recruiter.",
+      "kept": "Every claim seamed to its evidence.",
+      "risk": "Soft and craft-coded; undercuts 'precise, technical'.",
+      "hero": "https://impeccable.style/worlds/cards/textiles-weave-drape-fashion-memory-quilt-atlas-hero.webp"
+    },
+    {
+      "id": "challenger-hypercard",
+      "label": "HyperCard Shoebox Stack",
+      "verdict": "declined",
+      "lineage": "one-bit Macintosh card stacks",
+      "thesis": "The portfolio as a stack of black-and-white cards you flip through.",
+      "palette": ["#000000", "#ffffff"],
+      "materials": ["one-bit dither", "painted buttons"],
+      "viewport": "A fixed card with painted buttons; Home card lists About, Skills, Work.",
+      "case": "Charming to engineers over 45; obscures hierarchy and loses clarity on a 60-second scan.",
+      "kept": "One-bit state discipline: inverted solid ink for active states.",
+      "risk": "Retro-novelty; fixed-proportion cards fight phones.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-hypercard-stack-shoebox-hero.webp"
+    },
+    {
+      "id": "challenger-darkroom",
+      "label": "Darkroom Under Safelight",
+      "verdict": "declined",
+      "lineage": "amber safelight printing bays",
+      "thesis": "Proof emerges slowly in the developer tray.",
+      "palette": ["#e0831a", "#2a1a08", "#d9d4cc"],
+      "materials": ["amber safelight", "wet silver print"],
+      "viewport": "Amber-washed stations: compose, expose, develop; the CV develops as you scroll.",
+      "case": "Dark amber ground contradicts the daylight office scene; slow reveal fights the 60-second scan.",
+      "kept": "Test strips: stepped evidence bands.",
+      "risk": "Unreadable in a bright office.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-darkroom-safelight-bay-hero.webp"
+    },
+    {
+      "id": "challenger-deco",
+      "label": "Art Deco Cinema Lobby",
+      "verdict": "declined",
+      "lineage": "stepped brass marquees and sunburst frames",
+      "thesis": "Arrival staged through marquee, lobby, house.",
+      "palette": ["#0b0a0a", "#c9a24a", "#9b1c2e"],
+      "materials": ["lacquered ebony", "brass"],
+      "viewport": "Centered marquee with the name in stepped tiers over an ebony ground.",
+      "case": "Spectacle over substance; a recruiter wants facts, not velvet rope.",
+      "kept": "Mirrored center axis for the hero.",
+      "risk": "Dark, ornamental, slow.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-deco-cinema-lobby-hero.webp"
+    },
+    {
+      "id": "challenger-versailles",
+      "label": "Versailles Axial Gardens",
+      "verdict": "declined",
+      "lineage": "axial vistas and parterres",
+      "thesis": "Sections as bosquets along one axis.",
+      "palette": ["#3f6b3a", "#d8c9a3", "#b8902e"],
+      "materials": ["clipped hedge", "raked gravel"],
+      "viewport": "One long axis with symmetrical parterres of skills either side.",
+      "case": "Audience does not identify; symmetry constrains a content-driven CV.",
+      "kept": "Labels set along a single sightline.",
+      "risk": "Ornamental and slow.",
+      "hero": "https://impeccable.style/worlds/cards/architecture-inhabitable-space-versailles-bosquet-vistas-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": false},
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "The developer portfolio recruiters already know: hero, skills grid, project cards, executed impeccably.",
+    "palette": ["#ffffff", "#111827", "#2563eb"],
+    "materials": ["clean grid", "rounded cards"],
+    "viewport": "Name and title left, buttons below, project cards in a three-column grid.",
+    "risk": "Indistinguishable from the other fifty portfolios on the recruiter's screen."
+  },
+  "steer": true
+}

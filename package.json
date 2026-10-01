@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "serve": "python3 -m http.server 4173 -d site",
+    "serve": "python3 -m http.server 4817 -d site",
     "test": "playwright test",
     "test:unit": "node --test tests/*.test.js",
     "lint:html": "html-validate site/index.html site/404.html"
