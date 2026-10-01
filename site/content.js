@@ -6,7 +6,7 @@ const content = {
   email: 'laise.aeduardo@gmail.com',
   links: {
     github: 'https://github.com/LaiseEduardo',
-    linkedin: 'https://www.linkedin.com/in/laise-eduardo', // TODO confirm
+    linkedin: 'https://www.linkedin.com/in/laisealine/',
   },
   cv: null, // set to 'cv.pdf' when the PDF is added to site/
   revised: '2026-10-01', // last content change; update when editing this file
