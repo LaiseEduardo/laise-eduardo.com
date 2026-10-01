@@ -1,6 +1,6 @@
 const content = {
   name: 'Laise Eduardo',
-  title: 'Software Developer in Test · Test Automation Architect',
+  title: 'Principal SDET · Test Architecture · TypeScript · CI/CD',
   location: 'Barcelona, Spain',
   pitch: 'I design test automation that teams trust: fast, readable, and wired into CI from day one.',
   email: 'laise.aeduardo@gmail.com',
