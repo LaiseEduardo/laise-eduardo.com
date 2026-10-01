@@ -1,5 +1,7 @@
 # laise-eduardo.com
 
+Live: https://laise-eduardo.com
+
 Portfolio of Laise Eduardo. Static site in `site/`, infra in `terraform/`.
 
 - `npm install && npx playwright install chromium`
