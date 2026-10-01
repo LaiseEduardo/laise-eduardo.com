@@ -5,24 +5,22 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;'
 const html = (strings, ...vals) => strings.reduce((out, s, i) => out + s + (i < vals.length ? vals[i] : ''), '');
 const list = (arr, fn) => arr.map(fn).join('');
 const ext = 'rel="noopener" target="_blank"';
-const rev = new Date().toISOString().slice(0, 10);
 
 const hero = () => html`
 <section id="hero" class="hero" aria-labelledby="name">
   <div class="hero-lead">
-    <p class="dim">${esc(content.location)} · DRAWN BY SELF · CHECKED BY CI</p>
     <h1 id="name">${esc(content.name)}</h1>
     <p class="title">${esc(content.title)}</p>
     <p class="pitch">${esc(content.pitch)}</p>
     <ul class="callouts" aria-label="Proof">
-      ${list(content.proof, p => html`<li><a href="${esc(p.href)}" ${ext}><strong>${esc(p.value)}</strong><span>${esc(p.label)}</span></a></li>`)}
+      ${list(content.proof, p => html`<li><a href="${esc(p.href)}" ${ext}><strong>${esc(p.value)}</strong><span>${esc(p.label)}</span><i class="leader" aria-hidden="true"></i></a></li>`)}
     </ul>
   </div>
   <table class="title-block" aria-label="Title block">
     <tbody>
       <tr>
         <th scope="row">Name</th><td>${esc(content.name)}</td>
-        <th scope="row">Rev</th><td class="mono">${rev}</td>
+        <th scope="row">Rev</th><td class="mono">${esc(content.revised)}</td>
       </tr>
       <tr>
         <th scope="row">Title</th><td colspan="3">${esc(content.title)}</td>
@@ -52,25 +50,25 @@ const hero = () => html`
 
 const about = () => html`
 <section id="about" aria-labelledby="h-about">
-  <h2 id="h-about"><span class="zone">A·2</span>General notes</h2>
+  <h2 id="h-about">General notes</h2>
   <div class="prose">${list(content.about, p => html`<p>${esc(p)}</p>`)}</div>
 </section>`;
 
 const skills = () => html`
 <section id="skills" aria-labelledby="h-skills">
-  <h2 id="h-skills"><span class="zone">B·2</span>Specifications</h2>
+  <h2 id="h-skills">Specifications</h2>
   <dl class="dims">
     ${list(content.skills, g => html`
     <div class="dim-row">
-      <dt>${esc(g.group)}</dt>
-      <dd><ul class="chips">${list(g.items, i => html`<li>${esc(i)}</li>`)}</ul></dd>
+      <dd><ul class="span">${list(g.items, i => html`<li>${esc(i)}</li>`)}</ul></dd>
+      <dt><span class="measure">${esc(g.group)}</span></dt>
     </div>`)}
   </dl>
 </section>`;
 
 const experience = () => html`
 <section id="experience" aria-labelledby="h-exp">
-  <h2 id="h-exp"><span class="zone">C·3</span>Revision history</h2>
+  <h2 id="h-exp">Revision history</h2>
   <table class="rev">
     <thead><tr><th scope="col">Rev</th><th scope="col">Period</th><th scope="col">Description</th></tr></thead>
     <tbody>
@@ -89,17 +87,18 @@ const experience = () => html`
 
 const projects = () => html`
 <section id="projects" aria-labelledby="h-projects">
-  <h2 id="h-projects"><span class="zone">D·3</span>Detail views</h2>
+  <h2 id="h-projects">Detail views</h2>
   <div class="details">
     ${list(content.projects, (p, i) => html`
-    <article class="detail" aria-labelledby="p-${i}">
+    <article class="detail${i === 0 ? ' headline' : ''}" aria-labelledby="p-${i}">
       <header class="detail-head">
         <span class="bubble" aria-hidden="true">${String.fromCharCode(65 + i)}</span>
         <h3 id="p-${i}">${esc(p.name)}</h3>
-        <span class="scale mono">${p.live ? 'LIVE' : 'SOURCE'}</span>
+        <span class="scale">${p.live ? 'Live' : 'Source'}</span>
+        <i class="leader" aria-hidden="true"></i>
       </header>
       <p>${esc(p.description)}</p>
-      <ul class="chips">${list(p.tags, t => html`<li>${esc(t)}</li>`)}</ul>
+      <ul class="notes">${list(p.tags, t => html`<li>${esc(t)}</li>`)}</ul>
       <p class="detail-links">
         <a href="${esc(p.repo)}" ${ext}>Code</a>
         ${p.live ? html`<a href="${esc(p.live)}" ${ext}>Live site</a>` : ''}
@@ -110,7 +109,7 @@ const projects = () => html`
 
 const contact = () => html`
 <section id="contact" aria-labelledby="h-contact">
-  <h2 id="h-contact"><span class="zone">F·4</span>Issue for review</h2>
+  <h2 id="h-contact">Issue for review</h2>
   <div class="contact-row">
     <p class="pitch">Open to QA engineering and test-automation roles, on-site in Barcelona or remote.</p>
     <p><a class="btn primary" href="mailto:${esc(content.email)}">${esc(content.email)}</a></p>
