@@ -74,3 +74,23 @@ test('CV button renders exactly once when content.cv is set', async ({ page }) =
   const status = await page.evaluate(async () => (await fetch('/cv.pdf', { method: 'HEAD' })).status);
   expect(status).toBe(200);
 });
+
+test('section headings match the nav labels', async ({ page }) => {
+  await page.goto('/');
+  const heads = await page.locator('main h2').evaluateAll(hs => hs.map(h => h.firstChild.textContent.trim()));
+  expect(heads).toEqual(['About', 'Skills', 'Experience', 'Projects', 'Contact']);
+});
+
+test('about stays short: at most two paragraphs under 260 characters each', async ({ page }) => {
+  await page.goto('/');
+  const lens = await page.locator('#about .prose p').evaluateAll(ps => ps.map(p => p.textContent.length));
+  expect(lens.length).toBeLessThanOrEqual(2);
+  for (const l of lens) expect(l).toBeLessThan(260);
+});
+
+test('content width is capped on very wide screens', async ({ page }) => {
+  await page.setViewportSize({ width: 2000, height: 1000 });
+  await page.goto('/');
+  const w = await page.locator('#hero').evaluate(el => el.getBoundingClientRect().width);
+  expect(w).toBeLessThanOrEqual(1200);
+});

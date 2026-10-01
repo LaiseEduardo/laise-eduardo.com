@@ -50,13 +50,13 @@ const hero = () => html`
 
 const about = () => html`
 <section id="about" aria-labelledby="h-about">
-  <h2 id="h-about">General notes</h2>
+  <h2 id="h-about">About <span class="note">General notes</span></h2>
   <div class="prose">${list(content.about, p => html`<p>${esc(p)}</p>`)}</div>
 </section>`;
 
 const skills = () => html`
 <section id="skills" aria-labelledby="h-skills">
-  <h2 id="h-skills">Specifications</h2>
+  <h2 id="h-skills">Skills <span class="note">Specifications</span></h2>
   <dl class="dims">
     ${list(content.skills, g => html`
     <div class="dim-row">
@@ -68,7 +68,7 @@ const skills = () => html`
 
 const experience = () => html`
 <section id="experience" aria-labelledby="h-exp">
-  <h2 id="h-exp">Revision history</h2>
+  <h2 id="h-exp">Experience <span class="note">Revision history</span></h2>
   <table class="rev">
     <thead><tr><th scope="col">Rev</th><th scope="col">Period</th><th scope="col">Description</th></tr></thead>
     <tbody>
@@ -87,7 +87,7 @@ const experience = () => html`
 
 const projects = () => html`
 <section id="projects" aria-labelledby="h-projects">
-  <h2 id="h-projects">Detail views</h2>
+  <h2 id="h-projects">Projects <span class="note">Detail views</span></h2>
   <div class="details">
     ${list(content.projects, (p, i) => html`
     <article class="detail${i === 0 ? ' headline' : ''}" aria-labelledby="p-${i}">
@@ -108,7 +108,7 @@ const projects = () => html`
 
 const contact = () => html`
 <section id="contact" aria-labelledby="h-contact">
-  <h2 id="h-contact">Issue for review</h2>
+  <h2 id="h-contact">Contact <span class="note">Issue for review</span></h2>
   <div class="contact-row">
     <p class="pitch">Open to QA engineering and test-automation roles, on-site in Barcelona or remote.</p>
     <p><a class="btn primary" href="mailto:${esc(content.email)}">${esc(content.email)}</a></p>

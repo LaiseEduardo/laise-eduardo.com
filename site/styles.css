@@ -89,6 +89,8 @@ h1, h2, h3 {
   padding: 1.75rem var(--gutter) var(--gutter);
   min-height: calc(100vh - 2 * var(--gutter));
 }
+/* the frame fills the window; the drawing itself is capped so leaders and measures stay short */
+.sheet > .top, .sheet > main, .sheet > footer { max-width: 72rem; margin-inline: auto; width: 100%; }
 
 .zones {
   position: absolute;
@@ -170,8 +172,8 @@ h1, h2, h3 {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.7rem;
   color: var(--ink); text-decoration: none;
 }
-.callouts strong { font-family: var(--display); font-size: 1.6rem; font-weight: 900; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; }
-.callouts span { color: var(--ink-2); font-size: 0.95rem; }
+.callouts strong { font-family: var(--display); font-size: 1.85rem; font-weight: 900; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; }
+.callouts span { color: var(--ink-2); font-size: 1rem; }
 .callouts a:hover span, .callouts a:focus-visible span { color: var(--ink); }
 
 /* leader: a rule that runs from the claim to the title block, dot at the target end */
@@ -231,9 +233,10 @@ h1, h2, h3 {
 main > section { padding: 2.75rem 0; border-bottom: 1px solid var(--rule); }
 main > section:last-child { border-bottom: 0; }
 
-h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 700; margin-bottom: 1.4rem; }
+h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 700; margin-bottom: 1.4rem; display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap; }
+h2 .note { font-family: var(--body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; color: var(--ink-2); border: 1px solid var(--rule); padding: 0.2rem 0.5rem; }
 
-.prose { max-width: 68ch; }
+.prose { max-width: 60ch; }
 .prose p { margin: 0 0 1em; }
 
 /* specifications: each group is a dimension line — items are the dimensioned span,

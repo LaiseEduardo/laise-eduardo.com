@@ -16,9 +16,8 @@ const content = {
     { value: 'AWS + Terraform', label: 'infrastructure as code on eleven11 and 420finder', href: 'https://github.com/LaiseEduardo/eleven11/tree/main/terraform' },
   ],
   about: [
-    'I am a software development engineer in test who has been building quality systems since 2014: automation frameworks from scratch, test architecture for distributed systems, and CI/CD pipelines that give developers fast, trustworthy feedback.',
-    'My work is TypeScript-first across UI, API and integration testing. At MoonPay I cut pipeline cost and execution time by 40%; at Abcam I led automation across squads and introduced contract testing with Pact and Zod so integration risk shows up before production does.',
-    'I work best embedded with developers and tech leads, improving testability and mentoring engineers. Outside client work I ship my own products end to end, infrastructure included, which keeps my opinions about testing honest.',
+    'Software development engineer in test since 2014. I build automation frameworks from scratch, design test architecture for distributed systems, and wire quality into CI/CD so developers get fast, trustworthy feedback.',
+    'TypeScript-first across UI, API and integration testing. At MoonPay I cut pipeline cost and time by 40%; at Abcam I led automation across squads and introduced contract testing with Pact and Zod.',
   ],
   skills: [
     { group: 'Test automation', items: ['Playwright', 'Cypress', 'Jest', 'Supertest', 'WebdriverIO', 'Selenium', 'Protractor', 'Postman'] },
