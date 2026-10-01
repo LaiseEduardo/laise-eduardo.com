@@ -11,8 +11,7 @@ const content = {
   cv: 'cv.pdf',
   revised: '2026-10-01', // last content change; update when editing this file
   about: [
-    'Software development engineer in test since 2014. I build automation frameworks from scratch, design test architecture for distributed systems, and wire quality into CI/CD so developers get fast, trustworthy feedback.',
-    'TypeScript-first across UI, API and integration testing. At MoonPay I cut pipeline cost and time by 40%; at Abcam I led automation across squads and introduced contract testing with Pact and Zod.',
+    'Software development engineer in test since 2014. I build automation frameworks from scratch, design test architecture for distributed systems and wire quality into CI/CD, TypeScript-first across UI, API and integration testing.',
   ],
   skills: [
     { group: 'Test automation', items: ['Playwright', 'Cypress', 'Jest', 'Supertest', 'WebdriverIO', 'Selenium', 'Protractor', 'Postman'] },
