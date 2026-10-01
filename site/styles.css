@@ -240,6 +240,7 @@ h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 700; margin-bottom: 1.4
    the group name is the measured value set on the line between extension ticks */
 .dims { margin: 0; display: grid; gap: 1.6rem; }
 .dim-row { display: grid; gap: 0.35rem; }
+.dim-row dt { order: 2; } /* term first in markup for semantics, drawn as the measured value beneath the span */
 .dims dd { margin: 0; }
 .span { list-style: none; margin: 0; padding: 0 0.5rem; display: flex; flex-wrap: wrap; gap: 0.3rem 1.4rem; }
 .span li { font-size: 1.05rem; position: relative; }
@@ -278,7 +279,7 @@ h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 700; margin-bottom: 1.4
 
 /* detail views (projects): headline detail first at full width, support details below */
 .details { display: grid; gap: 1.25rem; }
-@media (min-width: 48rem) { .details { grid-template-columns: repeat(3, 1fr); } .detail.headline { grid-column: 1 / -1; } }
+@media (min-width: 48rem) { .details { grid-template-columns: repeat(3, minmax(0, 1fr)); } .detail.headline { grid-column: 1 / -1; } }
 .detail {
   border: 1px solid var(--ink); background: var(--cell); padding: 1.1rem 1.2rem 1.2rem;
   display: flex; flex-direction: column; gap: 0.8rem; position: relative;

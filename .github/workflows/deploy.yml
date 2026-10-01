@@ -5,7 +5,10 @@ on:
   workflow_dispatch:
 concurrency: { group: deploy-prod, cancel-in-progress: false }
 jobs:
+  test:
+    uses: ./.github/workflows/test.yml
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     environment: production
     permissions: { id-token: write, contents: read }

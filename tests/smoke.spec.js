@@ -41,11 +41,29 @@ test('no horizontal overflow', async ({ page }) => {
 test('404 page exists and is styled', async ({ page }) => {
   await page.goto('/404.html');
   await expect(page.getByRole('heading', { level: 1 })).toContainText('404');
-  await expect(page.locator('link[rel=stylesheet][href="styles.css"]')).toHaveCount(1);
 });
 
 test('meta description and canonical present', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('meta[name=description]')).toHaveAttribute('content', /.{40,}/);
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href', 'https://laise-eduardo.com/');
+});
+
+test('no horizontal overflow at tablet width (768px)', async ({ page }) => {
+  await page.setViewportSize({ width: 768, height: 1024 });
+  await page.goto('/');
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
+  expect(overflow).toBe(false);
+});
+
+test('404 page uses root-absolute asset paths so it styles at any depth', async ({ page }) => {
+  await page.goto('/404.html');
+  await expect(page.locator('link[rel=stylesheet][href="/styles.css"]')).toHaveCount(1);
+  await expect(page.locator('link[rel=icon][href="/favicon.svg"]')).toHaveCount(1);
+});
+
+test('skill groups put the term before its description', async ({ page }) => {
+  await page.goto('/');
+  const firstTags = await page.locator('#skills .dim-row').evaluateAll(rows => rows.map(r => r.firstElementChild.tagName));
+  for (const t of firstTags) expect(t).toBe('DT');
 });

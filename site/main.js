@@ -60,8 +60,8 @@ const skills = () => html`
   <dl class="dims">
     ${list(content.skills, g => html`
     <div class="dim-row">
-      <dd><ul class="span">${list(g.items, i => html`<li>${esc(i)}</li>`)}</ul></dd>
       <dt><span class="measure">${esc(g.group)}</span></dt>
+      <dd><ul class="span">${list(g.items, i => html`<li>${esc(i)}</li>`)}</ul></dd>
     </div>`)}
   </dl>
 </section>`;
