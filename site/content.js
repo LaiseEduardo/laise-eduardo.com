@@ -1,6 +1,6 @@
 const content = {
   name: 'Laise Eduardo',
-  title: 'Principal SDET · Test Architecture · TypeScript · CI/CD',
+  title: 'Principal SDET · Test Architecture · TypeScript · CI/CD · AI',
   location: 'Barcelona, Spain',
   pitch: 'I design test automation that teams trust: fast, readable, and wired into CI from day one.',
   email: 'laise.aeduardo@gmail.com',
@@ -25,7 +25,7 @@ const content = {
     { group: 'Architecture & quality', items: ['Test strategy', 'Test architecture', 'Contract testing (Pact, Zod)', 'API testing', 'E2E & integration testing', 'Flake reduction', 'Visual testing (OpenCV)'] },
     { group: 'Languages', items: ['TypeScript', 'JavaScript', 'Node.js', 'Python', 'Bash', 'HTML & CSS'] },
     { group: 'CI/CD & cloud', items: ['GitHub Actions', 'GitLab CI', 'CircleCI', 'Docker', 'AWS', 'GCP', 'Vercel', 'Terraform'] },
-    { group: 'Ways of working', items: ['Agile, Scrum, Kanban', 'Mentoring & coaching', 'Remote, international teams', 'JIRA, Linear, HP ALM'] },
+    { group: 'Ways of working', items: ['Agile, Scrum, Kanban', 'Mentoring & coaching', 'Remote, international teams', 'AI-assisted engineering (Claude Code, MCP, agents)', 'JIRA, Linear, HP ALM'] },
   ],
   experience: [
     { role: 'Senior QA Engineer, acting Principal', company: 'Abcam', period: 'Jul 2024 — Mar 2026', bullets: [
