@@ -12,9 +12,6 @@ const hero = () => html`
     <h1 id="name">${esc(content.name)}</h1>
     <p class="title">${esc(content.title)}</p>
     <p class="pitch">${esc(content.pitch)}</p>
-    <ul class="callouts" aria-label="Proof">
-      ${list(content.proof, p => html`<li><a href="${esc(p.href)}" ${ext}><strong>${esc(p.value)}</strong><span>${esc(p.label)}</span><i class="leader" aria-hidden="true"></i></a></li>`)}
-    </ul>
   </div>
   <table class="title-block" aria-label="Title block">
     <tbody>

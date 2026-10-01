@@ -10,11 +10,6 @@ const content = {
   },
   cv: 'cv.pdf',
   revised: '2026-10-01', // last content change; update when editing this file
-  proof: [
-    { value: '88%+', label: 'test coverage across eleven11 web, mobile and admin', href: 'https://github.com/LaiseEduardo/eleven11' },
-    { value: 'Playwright', label: 'TypeScript framework, CI on every push (polar-bear)', href: 'https://github.com/LaiseEduardo/polar-bear' },
-    { value: 'AWS + Terraform', label: 'infrastructure as code on eleven11 and 420finder', href: 'https://github.com/LaiseEduardo/eleven11/tree/main/terraform' },
-  ],
   about: [
     'Software development engineer in test since 2014. I build automation frameworks from scratch, design test architecture for distributed systems, and wire quality into CI/CD so developers get fast, trustworthy feedback.',
     'TypeScript-first across UI, API and integration testing. At MoonPay I cut pipeline cost and time by 40%; at Abcam I led automation across squads and introduced contract testing with Pact and Zod.',

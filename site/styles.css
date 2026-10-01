@@ -166,41 +166,6 @@ h1, h2, h3 {
 .hero .title::after { right: 0; }
 .pitch { font-size: 1.25rem; line-height: 1.45; max-width: 36ch; margin: 1.25rem 0 0; text-wrap: pretty; }
 
-.callouts { list-style: none; margin: 1.75rem 0 0; padding: 0; display: grid; gap: 0.7rem; }
-.callouts a {
-  min-width: 0;
-  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.7rem;
-  color: var(--ink); text-decoration: none;
-}
-.callouts strong { font-family: var(--display); font-size: 1.85rem; font-weight: 900; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; }
-.callouts span { color: var(--ink-2); font-size: 1rem; }
-.callouts a:hover span, .callouts a:focus-visible span { color: var(--ink); }
-
-/* leader: a rule that runs from the claim to the title block, dot at the target end */
-.leader { display: none; }
-@media (min-width: 64rem) {
-  .callouts { margin-right: -3rem; } /* cross the grid gap so leaders touch the title block */
-  .callouts a { flex-wrap: nowrap; }
-  .callouts span { white-space: nowrap; }
-  .leader {
-    display: block; position: relative; flex: 1 1 2rem; min-width: 2rem; height: 1px;
-    align-self: center; margin-top: 0.1em;
-    background: var(--rule);
-  }
-  .leader::before {
-    content: ""; position: absolute; inset: 0; background: var(--accent);
-    transform-origin: left; transform: scaleX(0);
-    transition: transform 0.55s var(--ease);
-  }
-  .leader::after {
-    content: ""; position: absolute; right: -3px; top: -3px; width: 7px; height: 7px;
-    border-radius: 50%; background: var(--rule);
-    transition: background-color 0.2s 0.3s;
-  }
-  a:hover > .leader::before, a:focus-visible > .leader::before { transform: scaleX(1); }
-  a:hover > .leader::after, a:focus-visible > .leader::after { background: var(--accent); }
-}
-
 .title-block {
   width: 100%;
   border-collapse: collapse;
@@ -320,7 +285,6 @@ footer p { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .leader::before { transition: none; }
 }
 
 /* title block reflow on narrow sheets */
