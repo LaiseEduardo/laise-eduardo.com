@@ -72,6 +72,7 @@ spacing:
   hero-gap: "2rem"
   hero-gap-wide: "3rem"
   section: "2.75rem"
+  drawing-max: "72rem"
   sheet-pad: "1.75rem 16px 16px"
   sheet-pad-wide: "2.5rem 2.5rem 2rem"
 components:
@@ -129,6 +130,12 @@ components:
     typography: "{typography.label}"
     rounded: "{rounded.none}"
     padding: "0.15rem 0.4rem"
+  section-note:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink-2}"
+    typography: "{typography.label}"
+    rounded: "{rounded.none}"
+    padding: "0.2rem 0.5rem"
   nav-link:
     backgroundColor: "transparent"
     textColor: "{colors.ink}"
@@ -142,17 +149,17 @@ components:
 
 **Creative North Star: "The Drawing Sheet"**
 
-The site is a single engineering drawing: a vellum-white sheet inside a double hairline ink frame, zone letters along the border, a title block in the corner, and the candidate herself laid out as a specified part. Headings are section stamps in condensed drafting capitals ("General notes", "Specifications", "Revision history", "Detail views", "Issue for review"). Skills are dimension lines with extension ticks and the group name set on the line; experience is a revision table; projects are detail views with a lettered bubble. Every claim on the sheet terminates in a "checked by" link, and three proof callouts run physical leader lines across the page to the title block.
+The site is a single engineering drawing: a vellum-white sheet inside a double hairline ink frame, zone letters along the border, a title block in the corner, and the candidate herself laid out as a specified part. Headings are plain section stamps in condensed drafting capitals (About, Skills, Experience, Projects, Contact), each carrying its drawing term ("General notes", "Specifications", "Revision history", "Detail views", "Issue for review") as a small bordered note label beside it. Skills are dimension lines with extension ticks and the group name set on the line; experience is a revision table; projects are detail views with a lettered bubble. Every claim on the sheet terminates in a "checked by" link.
 
-The world is drawn in one ink on one paper. There is one accent (drafting blue) and it is reserved for the things a draughter marks in colour: hyperlinks, the leader line as it draws itself, text selection, the focus ring. Every interactive state is a one-bit inversion (ink becomes paper, paper becomes ink); nothing fades, glows, lifts or rounds. Density is high but ruled: hairlines, not whitespace, separate regions. Dark mode is a blueprint inversion of the same sheet, not a second palette.
+The world is drawn in one ink on one paper. There is one accent (drafting blue) and it is reserved for the things a draughter marks in colour: hyperlinks, text selection, the focus ring. Every interactive state is a one-bit inversion (ink becomes paper, paper becomes ink); nothing fades, glows, lifts or rounds. Density is high but ruled: hairlines, not whitespace, separate regions. The frame fills the window; the drawing inside it is capped at 72rem and centred so measures and dimension lines stay short. Dark mode is a blueprint inversion of the same sheet, not a second palette.
 
 Confirmed rejections: the default developer portfolio (hero, skills grid, three rounded cards), gradients and glows, drop shadows, pill shapes, kickers and eyebrows above headings, decorative icons.
 
 **Key Characteristics:**
 - Framed sheet: body padding is the gutter; the frame is a 1px ink border plus a 1px ink outline offset 4px, with mono zone letters A–F (top) and 1–4 (left, desktop only).
 - Square everything: radius is 0 everywhere except the circular detail bubble.
-- Hairline hierarchy: ink hairlines for structural edges (frame, header, title block, tables, cards); grey hairlines for section dividers and leaders at rest.
-- One-bit states: hover and focus swap ink and paper; no colour shift, no shadow, no motion except the leader draw.
+- Hairline hierarchy: ink hairlines for structural edges (frame, header, title block, tables, cards); grey hairlines for section dividers and for annotation borders (section note, scale tag).
+- One-bit states: hover and focus swap ink and paper; no colour shift, no shadow, no motion beyond the 0.15s inversion.
 - Three faces, three jobs: condensed display capitals for stamps and actions, hyperlegible sans for reading, mono for machine values.
 
 ## Colors
@@ -160,21 +167,21 @@ Confirmed rejections: the default developer portfolio (hero, skills grid, three 
 One ink on one sheet, with drafting blue as the only marking colour; dark mode inverts the sheet to blueprint navy and lifts the blue so it still reads on it.
 
 ### Primary
-- **Drafting Blue** (`accent`): hyperlinks in prose and table cells, the leader line as it draws on hover/focus and its end dot, text selection background, the 2px focus ring. It never fills a button and never tints a surface.
+- **Drafting Blue** (`accent`): hyperlinks in prose and table cells, text selection background, the 2px focus ring. It never fills a button and never tints a surface.
 - **Blueprint Blue** (`accent-dark`): the same role under `prefers-color-scheme: dark`, lifted for contrast on navy.
 
 ### Neutral
 - **Vellum** (`sheet`): page background and the paper side of every one-bit inversion (button text on ink, bubble text on hover, the measure label's knock-out behind the dimension line).
 - **Drafting Ink** (`ink`): all text, every structural hairline (frame, header rule, title block and table cell borders, card borders, dimension lines and ticks), and the fill of the primary button and inverted states.
-- **Annotation Ink** (`ink-2`): secondary text — table headers, the title string, the measure label, callout descriptions, detail descriptions and notes, the footer.
-- **Pencil Grey** (`rule`): non-structural hairlines — section dividers, the hero underline, item separators inside a dimension span, leaders at rest and their dot, the scale-tag border, zone letters, the notes dash, the scrollbar thumb.
+- **Annotation Ink** (`ink-2`): secondary text — table headers, the title string, the measure label, the section note beside each h2, detail descriptions and notes, the footer.
+- **Pencil Grey** (`rule`): non-structural hairlines — section dividers, the hero underline, item separators inside a dimension span, the section-note and scale-tag borders, zone letters, the notes dash, the scrollbar thumb.
 - **Cell White** (`cell`): the fill of bordered cells — title block, revision table, detail cards — so they sit a hair above the vellum without a shadow.
 - **Blueprint** (`sheet-dark`), **Chalk** (`ink-dark`), **Chalk-2** (`ink-2-dark`), **Slate Rule** (`rule-dark`), **Blueprint Cell** (`cell-dark`), **Ink on Blue** (`accent-ink-dark`): the dark scheme, swapped in by `prefers-color-scheme: dark`. Same roles, no new ones.
 
 ### Named Rules
-**The One Ink Rule.** Buttons, inverted states and structural lines are ink and paper only. Blue marks a link or a live leader; it never fills a surface or a button.
+**The One Ink Rule.** Buttons, inverted states and structural lines are ink and paper only. Blue marks a link; it never fills a surface or a button.
 
-**The Two Hairlines Rule.** Ink hairlines bound things that are "on the sheet" (frame, cells, cards, dimension lines); grey hairlines separate or annotate (section dividers, item ticks, leaders at rest). Do not introduce a third line weight or colour.
+**The Two Hairlines Rule.** Ink hairlines bound things that are "on the sheet" (frame, cells, cards, dimension lines); grey hairlines separate or annotate (section dividers, item ticks, note and scale-tag borders). Do not introduce a third line weight or colour.
 
 **The Daylight Default Rule.** The light sheet is the canonical scene (office, daylight, laptop); dark is a system-driven inversion, never a toggle and never the default. `color-scheme` is declared on both.
 
@@ -188,27 +195,27 @@ One ink on one sheet, with drafting blue as the only marking colour; dark mode i
 
 ### Hierarchy
 - **Display** (900, `clamp(3.4rem, 11vw, 6rem)`, 0.95, uppercase, 0.01em): the name on the sheet, and the "404" on the error sheet. One per page.
-- **Headline** (700, `clamp(1.9rem, 4vw, 2.6rem)`, 0.95, uppercase, 0.02em): section stamps (h2). The headline detail's h3 steps up to 2.6rem on desktop.
-- **Title** (700, 1.6rem, 0.95, uppercase, 0.02em): detail h3; the proof callout value is the same size at 900. Nav links (1rem / 1.05rem desktop), buttons (1.1rem) and detail links (1.05rem) are the same face at 700 with 0.06em tracking.
+- **Headline** (700, `clamp(1.9rem, 4vw, 2.6rem)`, 0.95, uppercase, 0.02em): section stamps (h2), set as a baseline-aligned flex row with the drawing-term note label beside the name (0.9rem gap, wraps on narrow sheets). The headline detail's h3 steps up to 2.6rem on desktop.
+- **Title** (700, 1.6rem, 0.95, uppercase, 0.02em): detail h3. Nav links (1rem / 1.05rem desktop), buttons (1.1rem) and detail links (1.05rem) are the same face at 700 with 0.06em tracking.
 - **Lead** (400, 1.25rem, 1.45, max 36ch): the pitch under the name and the contact invitation.
-- **Body** (400, 1.0625rem, 1.55): prose at max 68ch, table cells (0.95rem in the title block), dimension span items (1.05rem), detail descriptions (max 60ch, annotation ink).
-- **Label** (700, 0.66–0.8rem, 0.1–0.12em, uppercase, body face): table headers (0.66rem), the scale tag (0.66rem), the measure on a dimension line (0.7rem, 0.12em), the brand mark (0.72rem), the title string under the name (0.8rem). Always annotation ink or ink; never the display face.
+- **Body** (400, 1.0625rem, 1.55): prose at max 60ch, table cells (0.95rem in the title block), dimension span items (1.05rem), detail descriptions (max 60ch, annotation ink).
+- **Label** (700, 0.66–0.8rem, 0.1–0.12em, uppercase, body face): table headers (0.66rem), the scale tag (0.66rem), the measure on a dimension line (0.7rem, 0.12em), the section note beside an h2 (0.7rem, 0.12em, 1px grey border, padding `0.2rem 0.5rem`), the brand mark (0.72rem), the title string under the name (0.8rem). Always annotation ink or ink; never the display face.
 - **Mono** (400, 0.875em of context, tabular): rev dates, sheet numbers, revision letters and periods, zone letters (0.7rem, 0.08em), detail bubbles (0.8rem), the skip link, and the contact address button (0.95rem, no uppercase).
 
 ### Named Rules
 **The Machine Values Rule.** Mono is for values a machine or a plotter would write — dates, counts, sheet and revision numbers, zone and detail letters, an email address. It is never used for prose, headings or labels.
 
-**The No Kicker Rule.** Nothing sits above a heading. Hierarchy is a stamp followed by its content; the title string under the name is a dimension string drawn beneath, not an eyebrow above.
+**The No Kicker Rule.** Nothing sits above a heading. Hierarchy is a stamp followed by its content; the title string under the name is a dimension string drawn beneath, and the drawing term on a section stamp is a note label set beside it on the same baseline, never an eyebrow above.
 
-**The Stamp Rule.** The display face is always uppercase and always 700 or 900. It appears only on headings, nav, buttons, detail links and the callout value; it never sets a paragraph.
+**The Stamp Rule.** The display face is always uppercase and always 700 or 900. It appears only on headings, nav, buttons and detail links; it never sets a paragraph. The note label beside a heading is the body-face label, not the display face.
 
 ## Layout
 
-The body carries the 16px gutter; inside it the `.sheet` frame is `min-height: calc(100vh - 2 × gutter)` and padded `1.75rem 16px 16px` (mobile) or `2.5rem 2.5rem 2rem` (≥48rem). Zone letters sit in the frame's margin; the left column appears only at ≥48rem.
+The body carries the 16px gutter; inside it the `.sheet` frame is `min-height: calc(100vh - 2 × gutter)` and padded `1.75rem 16px 16px` (mobile) or `2.5rem 2.5rem 2rem` (≥48rem). The frame fills the window, but the drawing inside it (header, main, footer) is capped at `max-width: 72rem` and centred with `margin-inline: auto`, so on wide screens the frame and zone letters span the viewport while the title block, dimension lines and tables stay at drafting width. Zone letters sit in the frame's margin; the left column appears only at ≥48rem.
 
-Two breakpoints: **48rem** (details become a 3-column grid with the headline detail spanning all columns; the revision table regains its header row; contact becomes `1fr auto`; left zones appear) and **64rem** (the hero becomes `1.3fr 1fr` aligned to the end so the title block sits bottom-right; callout leaders appear and the callouts list over-reaches `-3rem` into the grid gap so leaders touch the title block; the title block returns to a real 4-column table). Below 64rem the title block reflows to a stacked `max-content 1fr` grid of label/value rows with inner borders collapsed; below 48rem the revision table hides its head and each row becomes a `auto 1fr` grid.
+Two breakpoints: **48rem** (details become a 3-column grid with the headline detail spanning all columns; the revision table regains its header row; contact becomes `1fr auto`; left zones appear) and **64rem** (the hero becomes `1.3fr 1fr` aligned to the end so the title block sits bottom-right; the title block returns to a real 4-column table). Below 64rem the title block reflows to a stacked `max-content 1fr` grid of label/value rows with inner borders collapsed; below 48rem the revision table hides its head and each row becomes a `auto 1fr` grid.
 
-Vertical rhythm is section-based: each main section is padded 2.75rem top and bottom and closed by a grey hairline; the header rule is ink with 2rem below. Grids use 1.25rem (details, contact), 1.6rem (between dimension rows), 2rem/3rem (hero). Cell padding is `0.55rem 0.7rem` in the title block and `0.7rem 0.8rem` in the revision table. Reading measures are 36ch (lead), 60ch (detail description), 68ch (prose). Minimum supported width is 360px.
+Vertical rhythm is section-based: each main section is padded 2.75rem top and bottom and closed by a grey hairline; the header rule is ink with 2rem below. Grids use 1.25rem (details, contact), 1.6rem (between dimension rows), 2rem/3rem (hero). Cell padding is `0.55rem 0.7rem` in the title block and `0.7rem 0.8rem` in the revision table. Reading measures are 36ch (lead) and 60ch (prose and detail description). Minimum supported width is 360px.
 
 ## Elevation & Depth
 
@@ -219,7 +226,7 @@ No shadows anywhere. Depth is conveyed by the two hairline weights and by `cell`
 
 ## Shapes
 
-Everything is square (radius 0): the frame, cells, cards, buttons, the scale tag, the skip link. The single exception is the detail bubble, a 2rem circle with a 1px ink border, which reads as a drawing's detail callout. Recurring geometry is the hairline device: extension ticks (1px × 9–11px) at the ends of the title string and dimension lines; vertical 1px ticks between items in a span; a 7px dot terminating each leader; the `— ` dash prefix on notes. Lines are always 1px; the only 2px lines are the nav underline, the link hover underline and the focus ring.
+Everything is square (radius 0): the frame, cells, cards, buttons, the scale tag, the skip link. The single exception is the detail bubble, a 2rem circle with a 1px ink border, which reads as a drawing's detail callout. Recurring geometry is the hairline device: extension ticks (1px × 9–11px) at the ends of the title string and dimension lines; vertical 1px ticks between items in a span; the 1px grey bordered boxes of the section note and scale tag; the `— ` dash prefix on notes. Lines are always 1px; the only 2px lines are the nav underline, the link hover underline and the focus ring.
 
 ## Components
 
@@ -234,8 +241,8 @@ Buttons are stamped actions in drafting capitals, ink-outlined, and flip to soli
 ### Title Block
 The sheet's signature: a bordered table on cell white, every cell 1px ink. Row headers are labels (0.66rem 700 0.1em uppercase, annotation ink, width 1%, nowrap). Values are body 0.95rem; Rev and Sheet are mono. The last row holds the action pair. Below 64rem it stacks into label/value rows with left/top borders collapsed so it still reads as one block.
 
-### Callouts with Leaders
-Three proof lines: a 900-weight display value (1.6rem, uppercase) beside an annotation-ink description, with a 1px grey leader running to the title block and ending in a 7px grey dot. On hover or focus-visible of the link, an accent overlay draws along the leader from the left (`transform: scaleX(0→1)`, 0.55s, `cubic-bezier(0.16, 1, 0.3, 1)`) and the dot turns accent after 0.2s/0.3s delay; the description darkens to ink. Leaders render only at ≥64rem and are suppressed under `prefers-reduced-motion`.
+### Section Stamp with Note
+Every section opens with an h2 that reads the plain name (About, Skills, Experience, Projects, Contact) in the headline style, followed on the same baseline by the drawing term as a `note` label: body face 0.7rem 700 0.12em uppercase, annotation ink, 1px `rule` grey border, padding `0.2rem 0.5rem`, 0.9rem gap. The row is flex with `align-items: baseline` and wraps on narrow sheets; the note is static (no hover state) and is the same bordered-label device as the detail scale tag.
 
 ### Dimension Lines (Specifications)
 Each skill group is a `dim-row`: a wrapped span of items (1.05rem) separated by 1px grey ticks, with the dimension line beneath — 1px ink line, 11px ink extension ticks at both ends, and the group name as a `measure` label (0.7rem 700 0.12em uppercase, annotation ink) knocked out of the line on a vellum background. Rows are 1.6rem apart.
@@ -263,14 +270,14 @@ Accent, always underlined (1px, offset 0.18em); the underline thickens to 2px on
 - **Do** frame every page in the sheet: 16px gutter, 1px ink border plus a 1px ink outline offset 4px, mono zone letters in the margin.
 - **Do** express every interactive state as a one-bit inversion between `ink` and `sheet`, transitioned in 0.15s at most.
 - **Do** bound on-sheet objects (cells, cards, title block, dimension lines) with 1px ink hairlines, and separate or annotate with 1px `rule` grey.
-- **Do** set every heading, nav link, button and callout value in Big Shoulders Display, uppercase, 700 or 900.
+- **Do** set every heading, nav link, button and detail link in Big Shoulders Display, uppercase, 700 or 900.
 - **Do** set dates, counts, sheet/rev numbers, zone and detail letters and the email address in JetBrains Mono with tabular numerals.
-- **Do** reserve drafting blue for links, the drawn leader and its dot, selection and the focus ring.
-- **Do** keep reading measures at 36ch (lead), 60ch (card description) and 68ch (prose).
-- **Do** keep the light sheet as the default and let `prefers-color-scheme: dark` swap in the blueprint set; honour `prefers-reduced-motion` by removing the leader draw.
+- **Do** reserve drafting blue for links, selection and the focus ring.
+- **Do** keep reading measures at 36ch (lead) and 60ch (prose and card description), and cap the drawing at 72rem inside the full-window frame.
+- **Do** keep the light sheet as the default and let `prefers-color-scheme: dark` swap in the blueprint set; honour `prefers-reduced-motion` by turning off smooth scrolling.
 
 ### Don't:
-- **Don't** put a kicker, eyebrow or category label above a heading; the only secondary string near a heading is the dimension string drawn beneath the name.
+- **Don't** put a kicker, eyebrow or category label above a heading; secondary strings sit beneath (the title string under the name) or beside on the baseline (the section note), never above.
 - **Don't** use `box-shadow`, gradients, glows, blur or translucent overlays; depth is hairlines and cell white only.
 - **Don't** round corners on anything except the 2rem detail bubble; no pills, no `rounded-lg` cards.
 - **Don't** fill a button or a surface with the accent, and don't introduce a second accent.

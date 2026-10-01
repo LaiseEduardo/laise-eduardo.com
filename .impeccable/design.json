@@ -1,45 +1,277 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-01T00:00:00Z",
+  "generatedAt": "2026-10-01T18:20:02Z",
   "title": "Design System: laise-eduardo.com",
   "extensions": {
     "colorMeta": {
-      "sheet": { "role": "neutral", "displayName": "Vellum", "canonical": "#fbfbf9", "tonalRamp": ["oklch(15% 0.004 100)", "oklch(27% 0.004 100)", "oklch(39% 0.004 100)", "oklch(51% 0.004 100)", "oklch(63% 0.004 100)", "oklch(75% 0.004 100)", "oklch(87% 0.004 100)", "oklch(98.7% 0.003 100)"] },
-      "ink": { "role": "neutral", "displayName": "Drafting Ink", "canonical": "#0d1b2a", "tonalRamp": ["oklch(15% 0.035 250)", "oklch(22% 0.035 250)", "oklch(34% 0.035 250)", "oklch(46% 0.035 250)", "oklch(58% 0.035 250)", "oklch(70% 0.035 250)", "oklch(82% 0.035 250)", "oklch(95% 0.02 250)"] },
-      "ink-2": { "role": "neutral", "displayName": "Annotation Ink", "canonical": "#3a4653", "tonalRamp": ["oklch(15% 0.025 245)", "oklch(27% 0.025 245)", "oklch(38% 0.025 245)", "oklch(50% 0.025 245)", "oklch(62% 0.025 245)", "oklch(74% 0.025 245)", "oklch(86% 0.025 245)", "oklch(95% 0.015 245)"] },
-      "rule": { "role": "neutral", "displayName": "Pencil Grey", "canonical": "#9aa4ae", "tonalRamp": ["oklch(15% 0.015 240)", "oklch(27% 0.015 240)", "oklch(39% 0.015 240)", "oklch(51% 0.015 240)", "oklch(63% 0.015 240)", "oklch(71% 0.015 240)", "oklch(85% 0.015 240)", "oklch(95% 0.008 240)"] },
-      "accent": { "role": "primary", "displayName": "Drafting Blue", "canonical": "#1565c0", "tonalRamp": ["oklch(15% 0.08 255)", "oklch(27% 0.12 255)", "oklch(38% 0.15 255)", "oklch(49% 0.17 255)", "oklch(60% 0.16 255)", "oklch(72% 0.13 255)", "oklch(84% 0.08 255)", "oklch(95% 0.03 255)"] },
-      "accent-ink": { "role": "primary", "displayName": "Paper on Blue", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(100% 0 0)"] },
-      "cell": { "role": "neutral", "displayName": "Cell White", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(100% 0 0)"] },
-      "sheet-dark": { "role": "neutral", "displayName": "Blueprint", "canonical": "#0f1a2b", "tonalRamp": ["oklch(15% 0.04 255)", "oklch(21% 0.04 255)", "oklch(33% 0.04 255)", "oklch(45% 0.04 255)", "oklch(57% 0.04 255)", "oklch(69% 0.04 255)", "oklch(81% 0.03 255)", "oklch(95% 0.015 255)"] },
-      "ink-dark": { "role": "neutral", "displayName": "Chalk", "canonical": "#eef2f6", "tonalRamp": ["oklch(15% 0.01 240)", "oklch(27% 0.01 240)", "oklch(39% 0.01 240)", "oklch(51% 0.01 240)", "oklch(63% 0.01 240)", "oklch(75% 0.01 240)", "oklch(87% 0.01 240)", "oklch(96% 0.006 240)"] },
-      "ink-2-dark": { "role": "neutral", "displayName": "Chalk-2", "canonical": "#b7c2cf", "tonalRamp": ["oklch(15% 0.015 245)", "oklch(27% 0.015 245)", "oklch(39% 0.015 245)", "oklch(51% 0.015 245)", "oklch(63% 0.015 245)", "oklch(80% 0.015 245)", "oklch(88% 0.012 245)", "oklch(95% 0.008 245)"] },
-      "rule-dark": { "role": "neutral", "displayName": "Slate Rule", "canonical": "#5c6b7e", "tonalRamp": ["oklch(15% 0.025 250)", "oklch(27% 0.025 250)", "oklch(39% 0.025 250)", "oklch(50% 0.03 250)", "oklch(62% 0.03 250)", "oklch(74% 0.025 250)", "oklch(86% 0.02 250)", "oklch(95% 0.01 250)"] },
-      "accent-dark": { "role": "primary", "displayName": "Blueprint Blue", "canonical": "#6fb1ff", "tonalRamp": ["oklch(15% 0.06 255)", "oklch(27% 0.1 255)", "oklch(39% 0.14 255)", "oklch(51% 0.16 255)", "oklch(63% 0.15 255)", "oklch(74% 0.13 255)", "oklch(85% 0.08 255)", "oklch(95% 0.03 255)"] },
-      "accent-ink-dark": { "role": "primary", "displayName": "Ink on Blue", "canonical": "#0b1526", "tonalRamp": ["oklch(15% 0.04 260)", "oklch(27% 0.04 260)", "oklch(39% 0.04 260)", "oklch(51% 0.04 260)", "oklch(63% 0.04 260)", "oklch(75% 0.04 260)", "oklch(87% 0.03 260)", "oklch(95% 0.015 260)"] },
-      "cell-dark": { "role": "neutral", "displayName": "Blueprint Cell", "canonical": "#13213a", "tonalRamp": ["oklch(15% 0.045 260)", "oklch(24% 0.05 260)", "oklch(36% 0.05 260)", "oklch(48% 0.05 260)", "oklch(60% 0.05 260)", "oklch(72% 0.04 260)", "oklch(84% 0.03 260)", "oklch(95% 0.015 260)"] }
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Vellum",
+        "canonical": "#fbfbf9",
+        "tonalRamp": [
+          "oklch(15% 0.004 100)",
+          "oklch(27% 0.004 100)",
+          "oklch(39% 0.004 100)",
+          "oklch(51% 0.004 100)",
+          "oklch(63% 0.004 100)",
+          "oklch(75% 0.004 100)",
+          "oklch(87% 0.004 100)",
+          "oklch(98.7% 0.003 100)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Drafting Ink",
+        "canonical": "#0d1b2a",
+        "tonalRamp": [
+          "oklch(15% 0.035 250)",
+          "oklch(22% 0.035 250)",
+          "oklch(34% 0.035 250)",
+          "oklch(46% 0.035 250)",
+          "oklch(58% 0.035 250)",
+          "oklch(70% 0.035 250)",
+          "oklch(82% 0.035 250)",
+          "oklch(95% 0.02 250)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Annotation Ink",
+        "canonical": "#3a4653",
+        "tonalRamp": [
+          "oklch(15% 0.025 245)",
+          "oklch(27% 0.025 245)",
+          "oklch(38% 0.025 245)",
+          "oklch(50% 0.025 245)",
+          "oklch(62% 0.025 245)",
+          "oklch(74% 0.025 245)",
+          "oklch(86% 0.025 245)",
+          "oklch(95% 0.015 245)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Pencil Grey",
+        "canonical": "#9aa4ae",
+        "tonalRamp": [
+          "oklch(15% 0.015 240)",
+          "oklch(27% 0.015 240)",
+          "oklch(39% 0.015 240)",
+          "oklch(51% 0.015 240)",
+          "oklch(63% 0.015 240)",
+          "oklch(71% 0.015 240)",
+          "oklch(85% 0.015 240)",
+          "oklch(95% 0.008 240)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Drafting Blue",
+        "canonical": "#1565c0",
+        "tonalRamp": [
+          "oklch(15% 0.08 255)",
+          "oklch(27% 0.12 255)",
+          "oklch(38% 0.15 255)",
+          "oklch(49% 0.17 255)",
+          "oklch(60% 0.16 255)",
+          "oklch(72% 0.13 255)",
+          "oklch(84% 0.08 255)",
+          "oklch(95% 0.03 255)"
+        ]
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Paper on Blue",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(27% 0 0)",
+          "oklch(39% 0 0)",
+          "oklch(51% 0 0)",
+          "oklch(63% 0 0)",
+          "oklch(75% 0 0)",
+          "oklch(87% 0 0)",
+          "oklch(100% 0 0)"
+        ]
+      },
+      "cell": {
+        "role": "neutral",
+        "displayName": "Cell White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(27% 0 0)",
+          "oklch(39% 0 0)",
+          "oklch(51% 0 0)",
+          "oklch(63% 0 0)",
+          "oklch(75% 0 0)",
+          "oklch(87% 0 0)",
+          "oklch(100% 0 0)"
+        ]
+      },
+      "sheet-dark": {
+        "role": "neutral",
+        "displayName": "Blueprint",
+        "canonical": "#0f1a2b",
+        "tonalRamp": [
+          "oklch(15% 0.04 255)",
+          "oklch(21% 0.04 255)",
+          "oklch(33% 0.04 255)",
+          "oklch(45% 0.04 255)",
+          "oklch(57% 0.04 255)",
+          "oklch(69% 0.04 255)",
+          "oklch(81% 0.03 255)",
+          "oklch(95% 0.015 255)"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Chalk",
+        "canonical": "#eef2f6",
+        "tonalRamp": [
+          "oklch(15% 0.01 240)",
+          "oklch(27% 0.01 240)",
+          "oklch(39% 0.01 240)",
+          "oklch(51% 0.01 240)",
+          "oklch(63% 0.01 240)",
+          "oklch(75% 0.01 240)",
+          "oklch(87% 0.01 240)",
+          "oklch(96% 0.006 240)"
+        ]
+      },
+      "ink-2-dark": {
+        "role": "neutral",
+        "displayName": "Chalk-2",
+        "canonical": "#b7c2cf",
+        "tonalRamp": [
+          "oklch(15% 0.015 245)",
+          "oklch(27% 0.015 245)",
+          "oklch(39% 0.015 245)",
+          "oklch(51% 0.015 245)",
+          "oklch(63% 0.015 245)",
+          "oklch(80% 0.015 245)",
+          "oklch(88% 0.012 245)",
+          "oklch(95% 0.008 245)"
+        ]
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Slate Rule",
+        "canonical": "#5c6b7e",
+        "tonalRamp": [
+          "oklch(15% 0.025 250)",
+          "oklch(27% 0.025 250)",
+          "oklch(39% 0.025 250)",
+          "oklch(50% 0.03 250)",
+          "oklch(62% 0.03 250)",
+          "oklch(74% 0.025 250)",
+          "oklch(86% 0.02 250)",
+          "oklch(95% 0.01 250)"
+        ]
+      },
+      "accent-dark": {
+        "role": "primary",
+        "displayName": "Blueprint Blue",
+        "canonical": "#6fb1ff",
+        "tonalRamp": [
+          "oklch(15% 0.06 255)",
+          "oklch(27% 0.1 255)",
+          "oklch(39% 0.14 255)",
+          "oklch(51% 0.16 255)",
+          "oklch(63% 0.15 255)",
+          "oklch(74% 0.13 255)",
+          "oklch(85% 0.08 255)",
+          "oklch(95% 0.03 255)"
+        ]
+      },
+      "accent-ink-dark": {
+        "role": "primary",
+        "displayName": "Ink on Blue",
+        "canonical": "#0b1526",
+        "tonalRamp": [
+          "oklch(15% 0.04 260)",
+          "oklch(27% 0.04 260)",
+          "oklch(39% 0.04 260)",
+          "oklch(51% 0.04 260)",
+          "oklch(63% 0.04 260)",
+          "oklch(75% 0.04 260)",
+          "oklch(87% 0.03 260)",
+          "oklch(95% 0.015 260)"
+        ]
+      },
+      "cell-dark": {
+        "role": "neutral",
+        "displayName": "Blueprint Cell",
+        "canonical": "#13213a",
+        "tonalRamp": [
+          "oklch(15% 0.045 260)",
+          "oklch(24% 0.05 260)",
+          "oklch(36% 0.05 260)",
+          "oklch(48% 0.05 260)",
+          "oklch(60% 0.05 260)",
+          "oklch(72% 0.04 260)",
+          "oklch(84% 0.03 260)",
+          "oklch(95% 0.015 260)"
+        ]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "The name on the sheet (h1) and the 404 stamp. One per page." },
-      "headline": { "displayName": "Headline", "purpose": "Section stamps (h2); headline detail h3 at 2.6rem on desktop." },
-      "title": { "displayName": "Title", "purpose": "Detail h3, callout value (900), and at 0.06em tracking: nav links, buttons, detail links." },
-      "lead": { "displayName": "Lead", "purpose": "The pitch under the name and the contact invitation; max 36ch." },
-      "body": { "displayName": "Body", "purpose": "Prose (max 68ch), table cells, dimension span items, card descriptions (max 60ch)." },
-      "label": { "displayName": "Label", "purpose": "Uppercase tracked labels in the body face: table headers, scale tag, measure, brand mark, title string." },
-      "mono": { "displayName": "Mono", "purpose": "Machine values only: dates, sheet/rev numbers, zone and detail letters, the email address, the skip link." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name on the sheet (h1) and the 404 stamp. One per page."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section stamps (h2) with the drawing-term note label beside them; headline detail h3 at 2.6rem on desktop."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Detail h3, and at 0.06em tracking: nav links, buttons, detail links."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "The pitch under the name and the contact invitation; max 36ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose (max 60ch), table cells, dimension span items, card descriptions (max 60ch)."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase tracked labels in the body face: table headers, scale tag, section note, measure, brand mark, title string."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Machine values only: dates, sheet/rev numbers, zone and detail letters, the email address, the skip link."
+      }
     },
     "shadows": [],
     "motion": [
-      { "name": "ease", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The leader draw; the only easing token." },
-      { "name": "leader-draw", "value": "transform 0.55s var(--ease)", "purpose": "Accent overlay scales along the callout leader on hover/focus; removed under prefers-reduced-motion." },
-      { "name": "leader-dot", "value": "background-color 0.2s 0.3s", "purpose": "Leader end dot turns accent after the line has mostly drawn." },
-      { "name": "invert", "value": "background-color 0.15s, color 0.15s", "purpose": "One-bit inversion on buttons." }
+      {
+        "name": "invert",
+        "value": "background-color 0.15s, color 0.15s",
+        "purpose": "One-bit inversion on buttons; the only transition in the system."
+      }
     ],
     "breakpoints": [
-      { "name": "md", "value": "48rem" },
-      { "name": "lg", "value": "64rem" }
+      {
+        "name": "md",
+        "value": "48rem"
+      },
+      {
+        "name": "lg",
+        "value": "64rem"
+      }
     ],
-    "frame": { "gutter": "16px", "line": "1px", "outlineOffset": "4px", "zonesTop": "A–F", "zonesLeft": "1–4 (≥48rem)" }
+    "frame": {
+      "gutter": "16px",
+      "line": "1px",
+      "outlineOffset": "4px",
+      "zonesTop": "A–F",
+      "zonesLeft": "1–4 (≥48rem)",
+      "drawingMaxWidth": "72rem",
+      "drawingAlign": "margin-inline: auto on .sheet > .top, main, footer"
+    }
   },
   "components": [
     {
@@ -83,12 +315,12 @@
       "css": ".ds-title-block { width: 100%; border-collapse: collapse; border: 1px solid var(--ink, #0d1b2a); background: var(--cell, #ffffff); color: var(--ink, #0d1b2a); font-family: var(--body, 'Atkinson Hyperlegible', system-ui, sans-serif); font-size: 0.95rem; } .ds-title-block th, .ds-title-block td { border: 1px solid var(--ink, #0d1b2a); padding: 0.55rem 0.7rem; vertical-align: top; text-align: left; } .ds-title-block th { font-weight: 700; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2, #3a4653); width: 1%; white-space: nowrap; } .ds-title-block .ds-mono { font-family: var(--mono, 'JetBrains Mono', ui-monospace, Menlo, monospace); font-variant-numeric: tabular-nums; font-size: 0.875em; } .ds-title-block a { color: var(--accent, #1565c0); text-decoration: underline; text-underline-offset: 0.18em; text-decoration-thickness: 1px; } .ds-title-block a:hover { text-decoration-thickness: 2px; }"
     },
     {
-      "name": "Callout with Leader",
+      "name": "Section Stamp with Note",
       "kind": "custom",
-      "refersTo": "title",
-      "description": "Proof line: 900-weight value, annotation description, and a grey leader that draws accent on hover/focus.",
-      "html": "<a class=\"ds-callout\" href=\"#\"><strong>88%+</strong><span>test coverage across eleven11 web, mobile and admin</span><i class=\"ds-leader\"></i></a>",
-      "css": ".ds-callout { display: flex; align-items: baseline; gap: 0.35rem 0.7rem; color: var(--ink, #0d1b2a); text-decoration: none; min-width: 20rem; } .ds-callout strong { font-family: var(--display, 'Big Shoulders Display', 'Arial Narrow', sans-serif); font-size: 1.6rem; font-weight: 900; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; } .ds-callout span { color: var(--ink-2, #3a4653); font-size: 0.95rem; white-space: nowrap; font-family: var(--body, 'Atkinson Hyperlegible', system-ui, sans-serif); } .ds-callout:hover span, .ds-callout:focus-visible span { color: var(--ink, #0d1b2a); } .ds-leader { display: block; position: relative; flex: 1 1 2rem; min-width: 2rem; height: 1px; align-self: center; margin-top: 0.1em; background: var(--rule, #9aa4ae); } .ds-leader::before { content: ''; position: absolute; inset: 0; background: var(--accent, #1565c0); transform-origin: left; transform: scaleX(0); transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1); } .ds-leader::after { content: ''; position: absolute; right: -3px; top: -3px; width: 7px; height: 7px; border-radius: 50%; background: var(--rule, #9aa4ae); transition: background-color 0.2s 0.3s; } .ds-callout:hover .ds-leader::before, .ds-callout:focus-visible .ds-leader::before { transform: scaleX(1); } .ds-callout:hover .ds-leader::after, .ds-callout:focus-visible .ds-leader::after { background: var(--accent, #1565c0); } @media (prefers-reduced-motion: reduce) { .ds-leader::before { transition: none; } }"
+      "refersTo": "section-note",
+      "description": "Plain section name as an h2 stamp with the drawing term as a small bordered note label on the same baseline.",
+      "html": "<h2 class=\"ds-h2\">Skills <span class=\"ds-note\">Specifications</span></h2>",
+      "css": ".ds-h2 { font-family: var(--display, 'Big Shoulders Display', 'Arial Narrow', sans-serif); text-transform: uppercase; letter-spacing: 0.02em; line-height: 0.95; margin: 0; font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 700; color: var(--ink, #0d1b2a); display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap; } .ds-note { font-family: var(--body, 'Atkinson Hyperlegible', system-ui, sans-serif); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2, #3a4653); border: 1px solid var(--rule, #9aa4ae); padding: 0.2rem 0.5rem; border-radius: 0; }"
     },
     {
       "name": "Dimension Line",
@@ -125,35 +357,63 @@
   ],
   "narrative": {
     "northStar": "The Drawing Sheet",
-    "overview": "The site is a single engineering drawing: a vellum-white sheet inside a double hairline ink frame, zone letters along the border, a title block in the corner, and the candidate herself laid out as a specified part. Headings are section stamps in condensed drafting capitals (\"General notes\", \"Specifications\", \"Revision history\", \"Detail views\", \"Issue for review\"). Skills are dimension lines with extension ticks and the group name set on the line; experience is a revision table; projects are detail views with a lettered bubble. Every claim on the sheet terminates in a \"checked by\" link, and three proof callouts run physical leader lines across the page to the title block.\n\nThe world is drawn in one ink on one paper. There is one accent (drafting blue) and it is reserved for the things a draughter marks in colour: hyperlinks, the leader line as it draws itself, text selection, the focus ring. Every interactive state is a one-bit inversion (ink becomes paper, paper becomes ink); nothing fades, glows, lifts or rounds. Density is high but ruled: hairlines, not whitespace, separate regions. Dark mode is a blueprint inversion of the same sheet, not a second palette.\n\nConfirmed rejections: the default developer portfolio (hero, skills grid, three rounded cards), gradients and glows, drop shadows, pill shapes, kickers and eyebrows above headings, decorative icons.",
+    "overview": "The site is a single engineering drawing: a vellum-white sheet inside a double hairline ink frame, zone letters along the border, a title block in the corner, and the candidate herself laid out as a specified part. Headings are plain section stamps in condensed drafting capitals (About, Skills, Experience, Projects, Contact), each carrying its drawing term (\"General notes\", \"Specifications\", \"Revision history\", \"Detail views\", \"Issue for review\") as a small bordered note label beside it. Skills are dimension lines with extension ticks and the group name set on the line; experience is a revision table; projects are detail views with a lettered bubble. Every claim on the sheet terminates in a \"checked by\" link.\n\nThe world is drawn in one ink on one paper. There is one accent (drafting blue) and it is reserved for the things a draughter marks in colour: hyperlinks, text selection, the focus ring. Every interactive state is a one-bit inversion (ink becomes paper, paper becomes ink); nothing fades, glows, lifts or rounds. Density is high but ruled: hairlines, not whitespace, separate regions. The frame fills the window; the drawing inside it is capped at 72rem and centred so measures and dimension lines stay short. Dark mode is a blueprint inversion of the same sheet, not a second palette.\n\nConfirmed rejections: the default developer portfolio (hero, skills grid, three rounded cards), gradients and glows, drop shadows, pill shapes, kickers and eyebrows above headings, decorative icons.",
     "keyCharacteristics": [
       "Framed sheet: body padding is the gutter; the frame is a 1px ink border plus a 1px ink outline offset 4px, with mono zone letters A–F (top) and 1–4 (left, desktop only).",
       "Square everything: radius is 0 everywhere except the circular detail bubble.",
-      "Hairline hierarchy: ink hairlines for structural edges (frame, header, title block, tables, cards); grey hairlines for section dividers and leaders at rest.",
-      "One-bit states: hover and focus swap ink and paper; no colour shift, no shadow, no motion except the leader draw.",
+      "Hairline hierarchy: ink hairlines for structural edges (frame, header, title block, tables, cards); grey hairlines for section dividers and for annotation borders (section note, scale tag).",
+      "One-bit states: hover and focus swap ink and paper; no colour shift, no shadow, no motion beyond the 0.15s inversion.",
       "Three faces, three jobs: condensed display capitals for stamps and actions, hyperlegible sans for reading, mono for machine values."
     ],
     "rules": [
-      { "name": "The One Ink Rule", "body": "Buttons, inverted states and structural lines are ink and paper only. Blue marks a link or a live leader; it never fills a surface or a button.", "section": "colors" },
-      { "name": "The Two Hairlines Rule", "body": "Ink hairlines bound things that are \"on the sheet\" (frame, cells, cards, dimension lines); grey hairlines separate or annotate (section dividers, item ticks, leaders at rest). Do not introduce a third line weight or colour.", "section": "colors" },
-      { "name": "The Daylight Default Rule", "body": "The light sheet is the canonical scene (office, daylight, laptop); dark is a system-driven inversion, never a toggle and never the default. color-scheme is declared on both.", "section": "colors" },
-      { "name": "The Machine Values Rule", "body": "Mono is for values a machine or a plotter would write — dates, counts, sheet and revision numbers, zone and detail letters, an email address. It is never used for prose, headings or labels.", "section": "typography" },
-      { "name": "The No Kicker Rule", "body": "Nothing sits above a heading. Hierarchy is a stamp followed by its content; the title string under the name is a dimension string drawn beneath, not an eyebrow above.", "section": "typography" },
-      { "name": "The Stamp Rule", "body": "The display face is always uppercase and always 700 or 900. It appears only on headings, nav, buttons, detail links and the callout value; it never sets a paragraph.", "section": "typography" },
-      { "name": "The Flat Sheet Rule", "body": "No box-shadow, no backdrop-filter, no gradient, no translucent overlay. If something needs to stand out, it gets an ink border or an ink fill.", "section": "elevation" }
+      {
+        "name": "The One Ink Rule",
+        "body": "Buttons, inverted states and structural lines are ink and paper only. Blue marks a link; it never fills a surface or a button.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Hairlines Rule",
+        "body": "Ink hairlines bound things that are \"on the sheet\" (frame, cells, cards, dimension lines); grey hairlines separate or annotate (section dividers, item ticks, note and scale-tag borders). Do not introduce a third line weight or colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Daylight Default Rule",
+        "body": "The light sheet is the canonical scene (office, daylight, laptop); dark is a system-driven inversion, never a toggle and never the default. color-scheme is declared on both.",
+        "section": "colors"
+      },
+      {
+        "name": "The Machine Values Rule",
+        "body": "Mono is for values a machine or a plotter would write — dates, counts, sheet and revision numbers, zone and detail letters, an email address. It is never used for prose, headings or labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Kicker Rule",
+        "body": "Nothing sits above a heading. Hierarchy is a stamp followed by its content; the title string under the name is a dimension string drawn beneath, and the drawing term on a section stamp is a note label set beside it on the same baseline, never an eyebrow above.",
+        "section": "typography"
+      },
+      {
+        "name": "The Stamp Rule",
+        "body": "The display face is always uppercase and always 700 or 900. It appears only on headings, nav, buttons and detail links; it never sets a paragraph. The note label beside a heading is the body-face label, not the display face.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "No box-shadow, no backdrop-filter, no gradient, no translucent overlay. If something needs to stand out, it gets an ink border or an ink fill.",
+        "section": "elevation"
+      }
     ],
     "dos": [
       "Do frame every page in the sheet: 16px gutter, 1px ink border plus a 1px ink outline offset 4px, mono zone letters in the margin.",
       "Do express every interactive state as a one-bit inversion between ink and sheet, transitioned in 0.15s at most.",
       "Do bound on-sheet objects (cells, cards, title block, dimension lines) with 1px ink hairlines, and separate or annotate with 1px rule grey.",
-      "Do set every heading, nav link, button and callout value in Big Shoulders Display, uppercase, 700 or 900.",
+      "Do set every heading, nav link, button and detail link in Big Shoulders Display, uppercase, 700 or 900.",
       "Do set dates, counts, sheet/rev numbers, zone and detail letters and the email address in JetBrains Mono with tabular numerals.",
-      "Do reserve drafting blue for links, the drawn leader and its dot, selection and the focus ring.",
-      "Do keep reading measures at 36ch (lead), 60ch (card description) and 68ch (prose).",
-      "Do keep the light sheet as the default and let prefers-color-scheme: dark swap in the blueprint set; honour prefers-reduced-motion by removing the leader draw."
+      "Do reserve drafting blue for links, selection and the focus ring.",
+      "Do keep reading measures at 36ch (lead) and 60ch (prose and card description), and cap the drawing at 72rem inside the full-window frame.",
+      "Do keep the light sheet as the default and let prefers-color-scheme: dark swap in the blueprint set; honour prefers-reduced-motion by turning off smooth scrolling."
     ],
     "donts": [
-      "Don't put a kicker, eyebrow or category label above a heading; the only secondary string near a heading is the dimension string drawn beneath the name.",
+      "Don't put a kicker, eyebrow or category label above a heading; secondary strings sit beneath (the title string under the name) or beside on the baseline (the section note), never above.",
       "Don't use box-shadow, gradients, glows, blur or translucent overlays; depth is hairlines and cell white only.",
       "Don't round corners on anything except the 2rem detail bubble; no pills, no rounded-lg cards.",
       "Don't fill a button or a surface with the accent, and don't introduce a second accent.",
