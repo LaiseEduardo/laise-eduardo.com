@@ -195,10 +195,8 @@ h1, h2, h3 {
     border-radius: 50%; background: var(--rule);
     transition: background-color 0.2s 0.3s;
   }
-  a:hover > .leader::before, a:focus-visible > .leader::before,
-  .detail:hover .leader::before, .detail:focus-within .leader::before { transform: scaleX(1); }
-  a:hover > .leader::after, a:focus-visible > .leader::after,
-  .detail:hover .leader::after, .detail:focus-within .leader::after { background: var(--accent); }
+  a:hover > .leader::before, a:focus-visible > .leader::before { transform: scaleX(1); }
+  a:hover > .leader::after, a:focus-visible > .leader::after { background: var(--accent); }
 }
 
 .title-block {
@@ -244,7 +242,8 @@ h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 700; margin-bottom: 1.4
 .dim-row { display: grid; gap: 0.35rem; }
 .dims dd { margin: 0; }
 .span { list-style: none; margin: 0; padding: 0 0.5rem; display: flex; flex-wrap: wrap; gap: 0.3rem 1.4rem; }
-.span li { font-size: 1.05rem; }
+.span li { font-size: 1.05rem; position: relative; }
+.span li + li::before { content: ""; position: absolute; left: -0.75rem; top: 0.3em; bottom: 0.3em; width: 1px; background: var(--rule); }
 .dims dt { position: relative; height: 1.4rem; display: grid; place-items: center; }
 .dims dt::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--ink); }
 .dims dt::after {
@@ -285,12 +284,11 @@ h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 700; margin-bottom: 1.4
   display: flex; flex-direction: column; gap: 0.8rem; position: relative;
 }
 .detail-head { display: flex; align-items: center; gap: 0.8rem; }
-.detail-head .leader { flex: 1 1 1rem; min-width: 1rem; margin: 0 0.3rem; }
 .bubble {
   width: 2rem; height: 2rem; border-radius: 50%; border: 1px solid var(--ink);
   display: inline-grid; place-items: center; font-family: var(--mono); font-size: 0.8rem; flex: none;
 }
-.detail h3 { font-size: 1.6rem; font-weight: 700; }
+.detail h3 { font-size: 1.6rem; font-weight: 700; flex: 1; }
 .scale { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); border: 1px solid var(--rule); padding: 0.15rem 0.4rem; }
 .detail p { margin: 0; color: var(--ink-2); max-width: 60ch; }
 .notes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; font-size: 0.85rem; color: var(--ink-2); }

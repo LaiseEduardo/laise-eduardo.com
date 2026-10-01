@@ -95,7 +95,6 @@ const projects = () => html`
         <span class="bubble" aria-hidden="true">${String.fromCharCode(65 + i)}</span>
         <h3 id="p-${i}">${esc(p.name)}</h3>
         <span class="scale">${p.live ? 'Live' : 'Source'}</span>
-        <i class="leader" aria-hidden="true"></i>
       </header>
       <p>${esc(p.description)}</p>
       <ul class="notes">${list(p.tags, t => html`<li>${esc(t)}</li>`)}</ul>
