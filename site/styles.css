@@ -5,7 +5,6 @@
   --ink: #0d1b2a;
   --ink-2: #3a4653;
   --rule: #9aa4ae;
-  --rule-soft: #d9dde2;
   --accent: #1565c0;
   --accent-ink: #ffffff;
   --cell: #ffffff;
@@ -14,7 +13,6 @@
   --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --gutter: 16px;
   --frame: 1px;
-  --ease: cubic-bezier(0.16, 1, 0.3, 1);
   color-scheme: light;
 }
 
@@ -24,7 +22,6 @@
     --ink: #eef2f6;
     --ink-2: #b7c2cf;
     --rule: #5c6b7e;
-    --rule-soft: #26344a;
     --accent: #6fb1ff;
     --accent-ink: #0b1526;
     --cell: #13213a;
@@ -222,12 +219,6 @@ h2 .note { font-family: var(--body); font-size: 0.7rem; font-weight: 700; letter
 .measure {
   position: relative; z-index: 1; background: var(--sheet); padding: 0 0.6rem;
   font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2);
-}
-
-.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.chips li {
-  border: 1px solid var(--ink); padding: 0.25rem 0.6rem; font-size: 0.85rem; line-height: 1.3;
-  background: var(--cell);
 }
 
 /* revision table (experience) */
